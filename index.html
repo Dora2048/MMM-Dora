@@ -6,6 +6,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
       <!--这里放置真实显示的DOM内容-->
 
       <!----------------------------头部区域-->
-      <div class="mmm-header mui-clearfix">
+      <div class="mmm-header mui-clearfix" id="header">
         <div class="logo header-left mui-pull-left">
           <a href="#"><img src="./images/header_logo.png" alt=""></a>
         </div>
@@ -31,36 +32,11 @@
 
       </div>
 
-      <!-----------------------------导航区域-->
+      <!-----------------------------导航菜单栏区域-->
       <div class="mmm-nav">
-        <ul class="mui-clearfix">
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
-          <li><a href="#">
-            <img src="./images/ic_search.png" alt="">
-            <p>比价搜索</p>
-          </a></li>
+        <ul class="mui-clearfix" id="menu">
+          <!--见导航菜单模板-->
         </ul>
-
-
       </div>
 
       <!-----------------------------折扣推荐-->
@@ -71,91 +47,8 @@
           </a>
         </div>
         <div class="content">
-          <ul>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 fffffffffffffffffffffffffffffffffffffffffffff鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left"><img
-                    src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
-                    alt=""></div>
-                <div class="right">
-                  <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
-                  <div class="other clearfix">
-                    <span class="mall fl">京东商城 | 10-25 14:10</span>
-                    <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>1</span>
-                  </div>
-                </div>
-              </a>
-            </li>
+          <ul id="recList">
+            <!--见折扣推荐商品列表模板-->
           </ul>
         </div>
       </div>
@@ -180,7 +73,7 @@
           <ul class="clearfix">
             <li><a href="javascript:;">登录</a></li>
             <li><a href="javascript:;">注册</a></li>
-            <li><a href="javascript:;"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
+            <li><a href="#header"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
           </ul>
         </div>
         <div class="bottom">
@@ -191,15 +84,45 @@
           <p>m.manmanbuy.com</p>
         </div>
       </div>
-
-
     </div>
   </div>
-
 </div>
+
+
+<!--准备模板 导航菜单栏模板-->
+<!--@前面不能有空格-->
+<script type="text/template" id="menuTmp">
+  {{ each result v i }}
+  <li data-id="{{ v.indexmenuId }}"><a href="{{ v.titlehref }}">
+    {{@v.img}}
+    <p>{{ v.name }}</p>
+  </a></li>
+  {{ /each }}
+</script>
+
+<!--折扣推荐商品列表模板-->
+<script type="text/template" id="recTmp">
+  {{ each result v i }}
+  <li>
+    <a href="#">
+      <div class="left">{{@v.productImgSm }}</div>
+      <div class="right">
+        <p>{{ v.productName}}<span>{{ v.productPinkage }}</span></p>
+        <div class="other clearfix">
+          <span class="mall fl">{{ v.productFrom }} | {{ v.productTime}}</span>
+          <span class="comment fr"><i class=" mui-icon mui-icon-chatbubble"></i>{{ v.productComCount }}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+
 
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
