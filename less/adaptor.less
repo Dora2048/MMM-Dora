@@ -1,0 +1,45 @@
+//定义设计图给定的屏幕宽度
+@design:750;
+//定义基准点
+@base:100;
+
+//当前屏幕大小/设计图屏幕大小=当前根目录字体大小/基准点
+
+//在less中封装函数来适配屏幕,将屏幕大小作为形参传进函数,可以给定一个默认值,将媒体查询放入函数中，使用调用传参即可
+.adaptor(@value:320px){
+  @media screen and (min-width:@value){
+    html {
+      font-size:@value / @design * @base;
+    }
+  }
+}
+//调用函数，传入要适配的屏幕
+.adaptor(320px);
+.adaptor(360px);
+.adaptor(375px);
+.adaptor(384px);
+.adaptor(400px);
+.adaptor(424px);
+.adaptor(480px);
+.adaptor(540px);
+.adaptor(640px);
+.adaptor(720px);
+.adaptor(750px);
+
+
+//@media screen and (min-width: 375px) {
+//  html {
+//    font-size: 375px /750 *100;
+//  }
+//}
+//@media screen and (min-width: 415px) {
+//  html {
+//    font-size: 415px /750 *100;
+//  }
+//}
+//
+//@media screen and (min-width: 750px) {
+//  html {
+//    font-size: 100px;
+//  }
+//}
