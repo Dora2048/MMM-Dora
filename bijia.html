@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+</head>
+<body>
+<div class="mmm-container">
+  <div class="mui-scroll-wrapper">
+    <div class="mui-scroll">
+      <!--这里放置真实显示的DOM内容-->
+
+      <!----------------------------头部区域-->
+      <div class="mmm-header mui-clearfix" id="header">
+        <div class="logo header-left mui-pull-left">
+          <a href="#"><img src="./images/header_logo.png" alt=""></a>
+        </div>
+        <div class="appdown header-right mui-pull-right">
+          <a href="#" class="mui-pull-right"><img src="./images/header_app.png" alt=""></a>
+        </div>
+
+      </div>
+      <!---------------------------搜索区域-->
+      <div class="mmm-search">
+        <input type="text" placeholder="请输入您想比价的商品">
+        <input class="search" type="button" value="搜索">
+
+      </div>
+
+      <!---------------------------主体区域-->
+
+      <div class="mmm-main">
+        <div class="title clearfix" >
+          <a href="index.html">首页</a> >
+          <a href="javascript:;">电视</a> >
+          <a href="javascript:;">乐视TV(Letv)S50</a>
+          <input type="text" value="筛选">
+        </div>
+
+        <div class="content">
+          <ul>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+      <!---------------------------底部区域-->
+      <div class="mmm-footer">
+        <div class="top">
+          <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li class="backTop"><a href="#header"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--&lt;!&ndash;准备模板&ndash;&gt;-->
+<!--<script type="text/template" id="productTmp">-->
+  <!--{{ each result v i }}-->
+
+  <!--{{ /each }}-->
+<!--</script>-->
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/bijia.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+@import "common";
+
+.mmm-search {
+  border-bottom: 1px solid #ccc;
+}
+
+.mmm-main {
+  .category-title {
+    .first {
+
+      .first-title {
+        font-size: .3rem;
+        display: block;
+        position: relative;
+        padding-left: .4rem;
+        letter-spacing: .15rem;
+        height: .8rem;
+        line-height: .8rem;
+        background-color: #ededed;
+        border-bottom: 1px solid #ccc;
+        span {
+          position: absolute;
+          right: .4rem;
+          top: 0;
+        }
+      }
+      .category-content {
+        display: none;
+        .second {
+          height: .8rem;
+          line-height: .8rem;
+          width: 33.33%;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          background-color: #fff;
+          float: left;
+          .second-title {
+            text-align: center;
+            font-size: .24rem;
+            display: block;
+          }
+        }
+      }
+      .category-content.current {
+        display: block;
+      }
+    }
+  }
+}
+
+
+.mmm-footer {
+  margin-top:.5rem;
+  padding:0;
+}

@@ -1,0 +1,64 @@
+@import "common";
+
+.mmm-search {
+  border-bottom: 1px solid #ccc;
+}
+
+.mmm-main {
+  .title {
+    height: .75rem;
+    line-height: .75rem;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(to top ,#eaeaea ,#fff);
+    padding: 0 .17rem;
+    position:relative;
+    input {
+      width: 1.2rem;
+      height: .5rem;
+      text-align: center;
+      background-color: #eaeaea;
+      font-size: .24rem;
+      color:#333;
+      border: 1px solid #ccc;
+      position:absolute;
+      right:.17rem;
+      top:.12rem;
+    }
+    a {
+      font-size:.24rem;
+      color:#333;
+    }
+  }
+  .content {
+    li {
+      a {
+        border-bottom: 1px solid #ccc;
+        height: 2.36rem;
+        position:relative;
+        padding-left:2.36rem;
+        display: block;
+        img {
+          width: 2rem;
+          height: 2rem;
+          position:absolute;
+          left:.18rem;
+          top:.18rem;
+        }
+        .info {
+          width: 100%;
+          padding:.18rem 0;
+          line-height: .5rem;
+
+          .tit {
+            color:#333;
+            font-size: .28rem ;
+          }
+          .price {
+            color:red;
+            font-size: .28rem ;
+          }
+        }
+      }
+    }
+  }
+}

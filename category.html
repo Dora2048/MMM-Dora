@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+<body>
+<div class="mmm-container">
+  <div class="mui-scroll-wrapper">
+    <div class="mui-scroll">
+      <!--这里放置真实显示的DOM内容-->
+
+      <!----------------------------头部区域-->
+      <div class="mmm-header mui-clearfix" id="header">
+        <div class="logo header-left mui-pull-left">
+          <a href="#"><img src="./images/header_logo.png" alt=""></a>
+        </div>
+        <div class="appdown header-right mui-pull-right">
+          <a href="#" class="mui-pull-right"><img src="./images/header_app.png" alt=""></a>
+        </div>
+
+      </div>
+      <!---------------------------搜索区域-->
+      <div class="mmm-search">
+        <input type="text" placeholder="请输入您想比价的商品">
+        <input class="search" type="button" value="搜索">
+
+      </div>
+
+      <!---------------------------主体区域-->
+      <div class="mmm-main">
+        <div class="category-title">
+          <!--<li><a href="#"><strong>大家电</strong> <span>∨</span>-->
+          <!--</a>-->
+            <!--<ul class="category-content">-->
+              <!--<li ><a href="#">电视</a></li>-->
+            <!--</ul>-->
+          <!--</li>-->
+        </div>
+      </div>
+
+      <!---------------------------底部区域-->
+      <div class="mmm-footer">
+        <div class="top">
+          <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li class="backTop"><a href="#header"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--一级分类模板-->
+<script type="text/template" id="firstCateTmp">
+  {{ each result v i }}
+  <div data-id="{{ v.titleId }}" class="first">
+    <a href="#" class="first-title"><strong>{{ v.title }}</strong> <span>∨</span></a>
+    <ul class="clearfix category-content">
+      <!--<li class="second"><a href="#" class="second-title">电视</a></li>-->
+    </ul>
+  </div>
+  {{ /each }}
+</script>
+
+<!--二级分类模板-->
+<script type="text/template" id="secondCateTmp">
+  {{ each result v i }}
+    <li class="second" data-id="{{ v.categoryId}}"><a href=" productList.html?categoryid={{ v.categoryId }}&category={{ v.category }}" class="second-title">{{ v.category}}</a></li>
+  {{ /each }}
+</script>
+
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+</body>
+</html>
