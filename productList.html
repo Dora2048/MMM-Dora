@@ -34,27 +34,13 @@
       <!---------------------------主体区域-->
 
       <div class="mmm-main">
-        <div class="title clearfix" >
-          <a href="index.html">首页</a> >
-          <a href="category.html">分类</a> >
-          <a href="javascript:;">电视</a>
-          <input type="text" value="筛选">
+        <div class="title clearfix">
+          <!--见面包屑导航模板-->
         </div>
 
         <div class="content">
           <ul>
-            <!--<li>-->
-              <!--<a href="#">-->
-                <!--<img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">-->
-                <!--<div class="info">-->
-                  <!--<div class="tit">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</div>-->
-                  <!--<div class="price">-->
-                    <!--<span>&yen;1999.0</span>-->
-                  <!--</div>-->
-                  <!--<div class="other"><span>报价(6)</span>&nbsp;&nbsp;<span>评论(2286)</span></div>-->
-                <!--</div>-->
-              <!--</a>-->
-            <!--</li>-->
+            <!--见产品列表模板-->
           </ul>
         </div>
 
@@ -82,7 +68,7 @@
   </div>
 </div>
 
-<!--准备模板-->
+<!--准备模板   产品列表模板-->
 <script type="text/template" id="productListTmp">
   {{ each result v i }}
   <li>
@@ -91,13 +77,23 @@
       <div class="info">
         <div class="tit">{{ v.productName }}</div>
         <div class="price">
-          <span>&yen;{{ v.productPrice }}</span>
+          <span>{{ v.productPrice }}</span>
         </div>
         <div class="other"><span>{{ v.productQuote }}</span>&nbsp;&nbsp;<span>{{ v.productCom}}</span></div>
       </div>
     </a>
   </li>
   {{ /each }}
+</script>
+
+<!--模板二：面包屑导航模板-->
+<script type="text/template" id="navTmp">
+  <a href="index.html">首页</a> >
+  <a href="category.html" class="cate">分类</a> >
+  {{ each result v i }}
+  <a href="javascript:;">{{ v.category }}</a>
+  {{ /each }}
+  <input type="text" value="筛选">
 </script>
 
 <script src="./lib/zepto/zepto.min.js"></script>

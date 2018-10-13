@@ -7,6 +7,7 @@ $(function () {
   //console.log(obj);
   var categoryid = obj.categoryid;
   //console.log(categoryid);
+  //功能1：商品列表渲染
   $.ajax({
     url: "http://127.0.0.1:9090/api/getproductlist",
     type: "get",
@@ -21,6 +22,21 @@ $(function () {
       $(".mmm-main .content ul").html(htmlStr);
     }
   })
+  //功能2：面包屑导航渲染
+  $.ajax({
+    url: "http://127.0.0.1:9090/api/getcategorybyid",
+    type: "get",
+    data: {
+      categoryid: categoryid
+    },
+    dataType: "json",
+    success: function(info){
+      //console.log(info);
+      var htmlStr = template("navTmp",info);
+      $(".mmm-main .title").html(htmlStr);
+    }
+  })
+
 
   /*mui.init({
     pullRefresh: {

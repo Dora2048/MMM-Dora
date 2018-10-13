@@ -34,20 +34,37 @@
       <!---------------------------主体区域-->
 
       <div class="mmm-main">
-        <div class="title clearfix" >
-          <a href="index.html">首页</a> >
-          <a href="javascript:;">电视</a> >
-          <a href="javascript:;">乐视TV(Letv)S50</a>
-          <input type="text" value="筛选">
+        <div class="title clearfix">
+          <!--见面包屑导航模板-->
         </div>
-
-        <div class="content">
-          <ul>
-
-
+        <div class="product">
+          <!--见商品详情模板-->
+        </div>
+        <div class="tab">
+          <ul class="clearfix">
+            <li class="cur"><a href="#">比价购买</a></li>
+            <li class="mtab">
+              <a href="#">产品参数</a></li>
+            <li class=""><a href="#" class="">评价(2322)</a></li>
           </ul>
         </div>
-
+        <div class="plist clearfix">
+          <a href="https://www.jd.com"> <img
+              src="http://sf.manmanbuy.com/images/sitelogo/1.png"></a>
+          <a href="https://www.jd.com">京东商城</a>
+          <input type="button" value="去购买" class="fr">
+          <span class="fr">&yen;1999.0</span>
+        </div>
+        <div class="note">
+          <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+        </div>
+        <div class="appr">网友评价</div>
+        <div class="product-com-list">
+          <ul class="commonList">
+            <!--见评论模板-->
+          </ul>
+          <div class="more"><a class="morein" href="javascript:;">查看更多评价</a></div>
+        </div>
       </div>
 
       <!---------------------------底部区域-->
@@ -72,12 +89,54 @@
   </div>
 </div>
 
-<!--&lt;!&ndash;准备模板&ndash;&gt;-->
-<!--<script type="text/template" id="productTmp">-->
-  <!--{{ each result v i }}-->
+<!--准备模板 商品详情模板-->
+<script type="text/template" id="productTmp">
+  {{ each result v i }}
+  <div class="product-name">{{ v.productName }}</div>
+  <div class="product-img">
+    {{@v.productImg }}
+  </div>
+  <div class="product-collect">
+    <a href="javascript:setfav(473088);">
+      <img src="http://www.zuyushop.com/wap/images/sc.jpg"></a>
+  </div>
+  {{ /each }}
+</script>
 
-  <!--{{ /each }}-->
-<!--</script>-->
+<!--面包屑导航二分类模板-->
+<script type="text/template" id="secondNavTmp">
+  <a href="index.html">首页</a> >
+  {{each result v i }}
+  <a href="productList.html?category={{ v.category }}&categoryid={{ v.categoryId }}" class="cate">{{ v.category}}</a> >
+  {{ /each }}
+
+  <input type="text" value="筛选">1
+
+</script>
+
+<!--面包屑导航商品名称模板-->
+<script type="text/template" id="productNameTmp">
+  {{ each result v i }}
+  <a href="javascript:;">{{ v.brandName}}</a>
+  {{ /each }}
+</script>
+
+<!--评论模板-->
+<script type="text/template" id="commTmp">
+  {{ each result v i }}
+  <li>
+    <div class="mui-clearfix"><span class="mui-pull-left com-name">{{ v.comName }}</span><span
+        class="mui-pull-right com-time">{{ v.comTime }}</span>
+    </div>
+    <div class="mui-clearfix"><span class="star mui-pull-left com-star"><em class="star5"></em></span><span
+        class="mui-pull-right com-from">{{ v.comFrom }}</span></div>
+    <div class="com-content">
+      {{ v.comContent }}
+    </div>
+  </li>
+  {{ /each }}
+</script>
+
 
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
