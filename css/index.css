@@ -240,6 +240,12 @@ img {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+em,
+i,
+u,
+b {
+  font-style: normal;
+}
 @media screen and (min-width: 320px) {
   html {
     font-size: 42.66666667px;
@@ -407,6 +413,9 @@ body {
   text-align: center;
   line-height: 2;
   font-size: .2rem;
+}
+.mmm-nav li.none {
+  display: none;
 }
 .mmm-recommend .title {
   height: .7rem;

@@ -3,40 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/base.css">
   <style>
-    .header {
+    ul {
       width: 800px;
-      height: 100px;
-      background-color: orange;
-    }
-    .back,
-    .go {
-      width: 100px;
-      height: 100px;
     }
 
-    a {
-      display: block;
-      width: 34px;
-      height: 53px;
-      background: orange url("./images/icon_bar.png") -208px -16px no-repeat;
+    li {
+      width: 200px;
+      height: 200px;
+      /*border: 1px solid #000;*/
     }
-    .mid {
-      /*width: 100%;*/
-      overflow: hidden;
+    .banner {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      height: 200px;
+      width: 200px;
+      background-color: skyblue;
+      border: 1px solid #000;
+      /*overflow: hidden;*/
+    }
+    .leftArr,
+    .rightArr {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      color:red;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
+    .leftArr {
+      left:-50px;
+    }
+    .rightArr {
+      right:-50px;
     }
   </style>
 </head>
 <body>
-<div class="header mui-clearfix">
-  <div class="back mui-pull-left"><a href="#"></a></div>
-  <div class="go mui-pull-right"><a href="#"></a></div>
-  <div class="mid">最新优惠</div>
+
+<select name="" id="">
+  <option value="">1</option>
+  <option value="">1</option>
+  <option value="">1</option>
+  <option value="">1</option>
+  <option value="">1</option>
+</select>
+
+<div class="banner">
+  <div>
+    <div class="leftArr"> < </div>
+    <ul class="clearfix">
+      <li class="fl"><a href="#">1</a></li>
+      <li class="fl"><a href="#">2</a></li>
+      <li class="fl"><a href="#">3</a></li>
+      <li class="fl"><a href="#">4</a></li>
+    </ul>
+    <div class="rightArr"> > </div>
+  </div>
 </div>
+<script src="./lib/jquery-1.12.4.js"></script>
+
+<script>
+var $lis = $(".banner li");
+var index = 0 ;
+// 点击右键头
+$(".rightArr").on("click",function(){
+  index++;
+  if(index > $lis.length-1){
+    index = 0;
+  }
+  $lis.eq(index).fadeIn().siblings().fadeOut();
+})
+// 点击左箭头
+$(".leftArr").on("click",function(){
+  index--;
+  if(index < 0){
+    index = $lis.length-1;
+  }
+  $lis.eq(index).fadeIn().siblings().fadeOut();
+})
+//自动轮播
+setInterval(function(){
+  $(".rightArr").click();
+},2000)
 
 
-<textarea name="" id="" cols="30" rows="10"></textarea>
+</script>
 
 </body>
 </html>

@@ -13,6 +13,14 @@ $(function(){
       //绑定模板，渲染页面
       var htmlStr = template("menuTmp",info);
       $("#menu").html(htmlStr);
+      //功能3：点击更多
+      $(".mmm-nav ul").on("click","li",function(){
+        $(this).next().toggleClass("none");
+        $(this).next().next().toggleClass("none");
+        $(this).next().next().next().toggleClass("none");
+        $(this).next().next().next().next().toggleClass("none");
+      })
+
     }
   })
 
@@ -27,7 +35,6 @@ $(function(){
       $("#recList").html(htmlStr);
     }
   })
-
 
 
 
